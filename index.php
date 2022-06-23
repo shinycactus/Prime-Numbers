@@ -62,7 +62,7 @@ function formatString($multiples)
     }
 
     if($count > 2) {
-                $string = "";
+        $string = "";
         foreach ($multiples as $multiple) {
             $string .= "$multiple, ";
         }
