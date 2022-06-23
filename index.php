@@ -7,6 +7,7 @@ runTask();
  */
 function runTask()
 {
+    
     for ($x = 1; $x <= 100; $x++) {
         $multiples = getMultiplesAsString($x);
         echo "$x: $multiples \n";
@@ -54,12 +55,14 @@ function getMultiples($number)
  */
 function formatString($multiples)
 {
-    if (count($multiples <= 2)) {
+    $count = count($multiples);
+    
+    if($count <= 2) {
         return "[PRIME]";
     }
 
-    if (count($multiples) > 2) {
-        $string = "";
+    if($count > 2) {
+                $string = "";
         foreach ($multiples as $multiple) {
             $string .= "$multiple, ";
         }
